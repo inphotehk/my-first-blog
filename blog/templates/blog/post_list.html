@@ -1,30 +1,19 @@
 <!DOCTYPE.html>
 <html>
-<!--TEST.Django-web dev-0.1v-->
-<title>testblog</title>
-<body>
-  <div>
-     <h1>Django powered Web_dev</h1>
-  </div> 
-     <ul>
-      <ol>
-       <li>a</li>
-       <li>b</li>
-       <li>c</li>      
-       <li>d</li>        
-       <li>e</li>
-       <li>f</li>
-       <li>g</li> 
-        </ol>
-         <dl>
-           <dt>Test</dt>
-           <dd>One Two</dd>
-           <dt></dt>
-           <dd></dd>
-          <li>1</li>
-          <li>2</li>  
-         <dl>  
-     </ul>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Django Girls Blog</a></h1>
+        </div>
+       {% for post in posts %}
+          <div>
+              <p>published: {{ post.published_date }}</p>
+              <h1><a href="">{{ post.title }}</a></p>
+              <p>{{ post.text|linebreaks }}</p>
+          </div>
+       {% endfor %} 
+    </body>
+</html>
 
-</body>
-<html>
